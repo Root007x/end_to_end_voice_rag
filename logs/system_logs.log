@@ -739,3 +739,71 @@
 [2026-03-30 02:03:42,829: INFO: chat_endpoints]: Received chat request: messages='what is docline?' user_id='string' session_id='string'
 [2026-03-30 02:03:42,829: INFO: chat]: Start Chat
 [2026-03-30 02:03:43,252: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 02:22:28,187: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 02:23:05,823: INFO: chat]: Initializing Chat
+[2026-03-30 02:23:05,824: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-30 02:23:05,928: INFO: graph]: Building ChatBot Graph
+[2026-03-30 02:23:05,928: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 02:23:05,930: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 02:23:05,930: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 02:23:09,437: INFO: retriever]: Loading Vector Database
+[2026-03-30 02:23:09,439: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-30 02:23:09,456: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-30 02:23:09,469: INFO: retriever]: Retriever Created Successfully
+[2026-03-30 02:23:09,469: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 02:23:09,470: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 02:23:09,470: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 02:23:12,882: INFO: retriever]: Loading Vector Database
+[2026-03-30 02:23:12,887: INFO: graph]: Graph Built Successfully
+[2026-03-30 02:23:12,890: INFO: chat]: Chat Initialized Successfully
+[2026-03-30 02:23:12,890: INFO: chat_endpoints]: Received voice chat request: audio.webm
+[2026-03-30 02:23:12,891: INFO: voice]: Initializing Whisper Model....
+[2026-03-30 02:23:13,530: ERROR: audio]: Error parsing Opus packet header.
+[2026-03-30 02:23:13,742: INFO: transcribe]: Processing audio with duration 00:02.700
+[2026-03-30 02:23:14,262: INFO: transcribe]: Detected language 'en' with probability 0.21
+[2026-03-30 02:23:14,803: INFO: chat]: Start Chat
+[2026-03-30 02:23:15,402: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 02:23:15,414: INFO: voice]: Converting text to speech...
+[2026-03-30 02:23:58,890: INFO: chat_endpoints]: Received voice chat request: audio.webm
+[2026-03-30 02:23:58,890: INFO: voice]: Initializing Whisper Model....
+[2026-03-30 02:23:59,652: INFO: transcribe]: Processing audio with duration 00:03.180
+[2026-03-30 02:24:00,133: INFO: transcribe]: Detected language 'en' with probability 0.50
+[2026-03-30 02:24:01,429: INFO: chat]: Start Chat
+[2026-03-30 02:24:01,709: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 02:24:01,712: INFO: voice]: Converting text to speech...
+[2026-03-30 02:24:14,359: INFO: chat_endpoints]: Received chat history request: user_id='default_user' session_id='default_session'
+[2026-03-30 02:24:14,360: INFO: chat]: Getting chat history for session default_user_default_session
+[2026-03-30 02:27:14,801: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 02:27:26,437: INFO: chat]: Initializing Chat
+[2026-03-30 02:27:26,437: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-30 02:27:26,549: INFO: graph]: Building ChatBot Graph
+[2026-03-30 02:27:26,549: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 02:27:26,551: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 02:27:26,551: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 02:27:30,068: INFO: retriever]: Loading Vector Database
+[2026-03-30 02:27:30,070: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-30 02:27:30,086: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-30 02:27:30,097: INFO: retriever]: Retriever Created Successfully
+[2026-03-30 02:27:30,097: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 02:27:30,099: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 02:27:30,099: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 02:27:33,486: INFO: retriever]: Loading Vector Database
+[2026-03-30 02:27:33,491: INFO: graph]: Graph Built Successfully
+[2026-03-30 02:27:33,493: INFO: chat]: Chat Initialized Successfully
+[2026-03-30 02:27:33,494: INFO: chat_endpoints]: Received voice chat request: audio.webm
+[2026-03-30 02:27:33,494: INFO: voice]: Initializing Whisper Model....
+[2026-03-30 02:27:34,069: ERROR: audio]: Error parsing Opus packet header.
+[2026-03-30 02:27:34,256: INFO: transcribe]: Processing audio with duration 00:02.940
+[2026-03-30 02:27:34,724: INFO: transcribe]: Detected language 'en' with probability 0.63
+[2026-03-30 02:27:35,212: INFO: chat]: Start Chat
+[2026-03-30 02:27:35,668: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 02:27:35,679: INFO: voice]: Converting text to speech...
+[2026-03-30 02:29:37,998: INFO: chat_endpoints]: Received voice chat request: audio.webm
+[2026-03-30 02:29:37,998: INFO: voice]: Initializing Whisper Model....
+[2026-03-30 02:29:38,783: INFO: transcribe]: Processing audio with duration 00:01.800
+[2026-03-30 02:29:39,265: INFO: transcribe]: Detected language 'en' with probability 0.60
+[2026-03-30 02:29:40,207: INFO: chat]: Start Chat
+[2026-03-30 02:29:40,799: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 02:29:40,802: INFO: voice]: Converting text to speech...
+[2026-03-30 02:30:08,344: INFO: chat_endpoints]: Received chat history request: user_id='default_user' session_id='default_session'
+[2026-03-30 02:30:08,344: INFO: chat]: Getting chat history for session default_user_default_session

@@ -1,6 +1,16 @@
 import streamlit as st
 import requests
+import base64
+import time
 from streamlit_mic_recorder import mic_recorder
+
+
+# Helper function for ChatGPT-style streaming
+def stream_data(text):
+    for word in text.split(" "):
+        yield word + " "
+        time.sleep(0.04)
+
 
 st.title("Voice RAG Chatbot")
 
@@ -20,7 +30,10 @@ if st.button("Send Text Message"):
             if response.status_code == 200:
                 data = response.json()
                 st.success("Response received!")
-                st.write("**Bot:**", data["messages"])
+
+                with st.chat_message("assistant"):
+                    st.write_stream(stream_data(data["messages"]))
+
                 st.write("**Confidence Score:**", data["confidence_score"])
             else:
                 st.error(f"Error: {response.status_code} - {response.text}")
@@ -42,16 +55,25 @@ if audio:
         files = {"audio": ("audio.webm", audio["bytes"], "audio/webm")}
         data = {"session_id": session_id, "user_id": user_id}
         try:
-            response = requests.post(
-                "http://localhost:8000/voice_chat", files=files, data=data
-            )
-            if response.status_code == 200:
-                data = response.json()
-                st.success("Voice processed!")
-                st.write("**Bot:**", data["messages"])
-                st.write("**Confidence Score:**", data["confidence_score"])
-            else:
-                st.error(f"Error: {response.status_code} - {response.text}")
+            with st.spinner("Processing voice..."):
+                response = requests.post(
+                    "http://localhost:8000/voice_chat", files=files, data=data
+                )
+                if response.status_code == 200:
+                    data = response.json()
+                    st.success("Voice processed!")
+
+                    with st.chat_message("assistant"):
+                        st.write_stream(stream_data(data["messages"]))
+
+                    st.write("**Confidence Score:**", data["confidence_score"])
+
+                    # Play the bot's generated audio
+                    if data.get("audio_base64"):
+                        audio_bytes = base64.b64decode(data["audio_base64"])
+                        st.audio(audio_bytes, format="audio/mpeg", autoplay=True)
+                else:
+                    st.error(f"Error: {response.status_code} - {response.text}")
         except Exception as e:
             st.error(f"Failed to connect: {str(e)}")
 

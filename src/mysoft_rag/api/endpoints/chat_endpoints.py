@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from fastapi.params import Depends
 from fastapi.responses import JSONResponse
 from uuid import uuid4
+import base64
 
 from src.mysoft_rag.services.chatbot.voice import VoiceService
 from src.mysoft_rag.services.chatbot.vector_store_data import VectorStore
@@ -72,8 +73,14 @@ async def voice_chat(
 
         audio_bytes = await audio.read()
         transcript = await voice_service.transcribe_audio(audio_bytes)  # STT
-        print(f"Transcribed text: {transcript}")
-        respond, confidence = init_chat.chat(transcript, full_id)
+        respond, confidence = init_chat.chat(transcript, full_id)  # get text response
+
+        generated_audio_bytes = await voice_service.text_to_speech(respond)
+        audio_base64 = (
+            base64.b64encode(generated_audio_bytes).decode("utf-8")
+            if generated_audio_bytes
+            else None
+        )
 
         return JSONResponse(
             status_code=200,
@@ -81,6 +88,7 @@ async def voice_chat(
                 "messages": respond,
                 "confidence_score": confidence,
                 "session_id": session_id,
+                "audio_base64": audio_base64,
             },
         )
 
