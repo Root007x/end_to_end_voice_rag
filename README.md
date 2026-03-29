@@ -107,7 +107,6 @@ streamlit run streamlit_app.py
 - **Sequential Processing:** Currently, requests are processed one by one. Concurrent users may experience delays as heavy CPU tasks (like Whisper transcription and vector search) block the server's main execution thread.
 - **Online TTS:** The application uses `edge-tts`, which requires an active internet connection and does not support offline voice generation.
 - **Volatile Memory:** Chat history is stored in-memory (`MemorySaver`). It is not persistent and will be lost if the FastAPI server is restarted.
-- **Context Window:** The chatbot's memory is limited by the LLM's context window and the number of retrieved documents from the vector database.
 
 ## 📂 Project Structure
 
