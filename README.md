@@ -93,6 +93,22 @@ streamlit run streamlit_app.py
 
 *The UI will automatically open in your browser at `http://localhost:8501`.*
 
+## ⚠️ Assumptions and Limitations
+
+### Assumptions
+
+- **Internet Connectivity:** Required for API-based services including Groq (LLM) and Edge-TTS (Voice Generation).
+- **Microphone Access:** Ensure your browser has permission to access the microphone for the Streamlit `mic_recorder` to function.
+- **System Dependencies:** `ffmpeg` must be installed and added to your system's PATH.
+
+### Limitations
+
+- **Processing Latency:** There is a noticeable delay between speaking and receiving a response due to the sequential pipeline: STT → Vector Search → LLM Generation → TTS Generation.
+- **Sequential Processing:** Currently, requests are processed one by one. Concurrent users may experience delays as heavy CPU tasks (like Whisper transcription and vector search) block the server's main execution thread.
+- **Online TTS:** The application uses `edge-tts`, which requires an active internet connection and does not support offline voice generation.
+- **Volatile Memory:** Chat history is stored in-memory (`MemorySaver`). It is not persistent and will be lost if the FastAPI server is restarted.
+- **Context Window:** The chatbot's memory is limited by the LLM's context window and the number of retrieved documents from the vector database.
+
 ## 📂 Project Structure
 
 - `app.py`: The FastAPI server entry point.
