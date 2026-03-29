@@ -82,3 +82,86 @@
 [2026-03-29 22:12:33,759: INFO: transcribe]: Detected language 'en' with probability 0.43
 [2026-03-29 22:12:34,180: INFO: chat]: Start Chat
 [2026-03-29 22:12:35,760: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-29 22:36:34,339: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-29 22:37:06,465: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 22:37:06,467: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 22:37:06,467: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 22:37:10,930: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-03-29 22:37:10,959: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-03-29 22:37:11,960: INFO: document_converter]: Going to convert document batch...
+[2026-03-29 22:37:11,960: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash d125b8a2c18e6b7b87dbdce4ea6b7d04
+[2026-03-29 22:37:11,985: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-03-29 22:37:12,027: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-03-29 22:37:12,041: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-03-29 22:37:12,112: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-03-29 22:37:13,676: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-03-29 22:37:14,060: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-03-29 22:37:14,074: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-03-29 22:37:14,118: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-03-29 22:37:14,152: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-03-29 22:37:14,691: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-03-29 22:37:14,702: INFO: __init__]: Registered table structure engines: ['docling_tableformer']
+[2026-03-29 22:37:15,132: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-03-29 22:37:15,695: INFO: base_pipeline]: Processing document Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow.pdf
+[2026-03-29 22:37:34,190: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:37:38,152: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:38:25,650: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:38:31,787: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:38:39,679: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:38:43,111: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:38:48,057: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:38:52,817: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:39:11,731: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:39:14,548: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:39:15,983: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:39:28,017: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:39:34,660: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:40:12,299: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:40:38,148: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:40:56,194: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:40:59,583: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:41:05,658: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:41:32,314: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:41:33,572: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:42:06,370: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:42:17,279: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:42:33,513: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:42:34,629: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:43:52,656: WARNING: rapid_ocr_model]: RapidOCR returned empty result!
+[2026-03-29 22:47:15,353: INFO: document_converter]: Finished converting document Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow.pdf in 604.40 sec.
+[2026-03-29 22:47:16,042: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-03-29 22:47:16,134: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-03-29 22:47:16,952: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-03-29 22:47:16,952: INFO: vector_store_data]: Vectorize Data
+[2026-03-29 22:48:02,697: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-29 22:48:02,718: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-29 22:48:02,769: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-03-29 22:52:39,605: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-29 22:52:57,848: INFO: chat]: Initializing Chat
+[2026-03-29 22:52:57,848: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-29 22:52:57,965: INFO: graph]: Building ChatBot Graph
+[2026-03-29 22:52:57,966: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 22:52:57,968: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 22:52:57,968: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 22:53:01,472: INFO: retriever]: Loading Vector Database
+[2026-03-29 22:53:01,473: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-29 22:53:01,487: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-29 22:53:01,504: INFO: retriever]: Retriever Created Successfully
+[2026-03-29 22:53:01,504: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 22:53:01,506: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 22:53:01,506: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 22:53:04,860: INFO: retriever]: Loading Vector Database
+[2026-03-29 22:53:04,865: INFO: graph]: Graph Built Successfully
+[2026-03-29 22:53:04,867: INFO: chat]: Chat Initialized Successfully
+[2026-03-29 22:53:04,867: INFO: chat_endpoints]: Received chat request: messages='who are u?' user_id='string' session_id='123'
+[2026-03-29 22:53:04,867: INFO: chat]: Start Chat
+[2026-03-29 22:53:06,991: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-29 22:54:02,660: INFO: chat_endpoints]: Received chat request: messages='which year machine learning was coined in?' user_id='string' session_id='123'
+[2026-03-29 22:54:02,661: INFO: chat]: Start Chat
+[2026-03-29 22:54:04,157: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-29 22:55:47,704: INFO: chat_endpoints]: Received chat request: messages='who is Aurélien Géron?' user_id='string' session_id='123'
+[2026-03-29 22:55:47,714: INFO: chat]: Start Chat
+[2026-03-29 22:55:48,782: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-29 22:56:24,397: INFO: chat_endpoints]: Received chat request: messages='what is Docling?' user_id='string' session_id='123'
+[2026-03-29 22:56:24,397: INFO: chat]: Start Chat
+[2026-03-29 22:56:25,697: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

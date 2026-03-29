@@ -30,8 +30,8 @@ class PreprocessData:
                     Document(
                         page_content=section,
                         metadata={
-                            "company": "Mysoft Heaven (BD) Ltd.",
-                            "source": "Company_profile",
+                            "Topic": "Machine Learning (ML)",
+                            "source": "PDF Document",
                             "type": "pdf_section",
                         },
                     )
@@ -58,7 +58,7 @@ class PreprocessData:
                     Document(
                         page_content=cleaned_web_text,
                         metadata={
-                            "company": "Mysoft Heaven (BD) Ltd.",
+                            "topic": "Machine Learning (ML)",
                             "source": doc.metadata.get("source", "website"),
                             "type": "web_page",
                         },

@@ -12,21 +12,11 @@ logger:
 
 
 pdf_file:
-  loc: "src/mysoft_rag/data/Mysoftheaven-Profile_2026.pdf"
+  loc: "src/mysoft_rag/data/Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow.pdf"
 
 web_data:
   urls: [
-    "https://mysoftheaven.com/products",
-    "https://mysoftheaven.com/notable_products",
-    "https://mysoftheaven.com/notable_details/7",
-    "https://mysoftheaven.com/notable_details/5",
-    "https://mysoftheaven.com/company-profile",
-    "https://mysoftheaven.com/ceo-message",
-    "https://mysoftheaven.com/service/website-design-development",
-    "https://mysoftheaven.com/service/web-application-development",
-    "https://mysoftheaven.com/service/machine-learning",
-    "https://mysoftheaven.com/management-team",
-    "https://mysoftheaven.com/"
+    "https://en.wikipedia.org/wiki/Machine_learning",
   ]
 
 vector_database:
