@@ -1,0 +1,84 @@
+[2026-03-29 20:52:51,532: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-29 20:53:25,796: INFO: chat]: Initializing Chat
+[2026-03-29 20:53:25,797: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-29 20:53:27,030: INFO: graph]: Building ChatBot Graph
+[2026-03-29 20:53:27,030: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 20:53:27,032: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 20:53:27,032: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 20:53:31,604: INFO: retriever]: Loading Vector Database
+[2026-03-29 20:53:31,626: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-29 20:53:31,890: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-29 20:53:31,960: INFO: retriever]: Retriever Created Successfully
+[2026-03-29 20:53:31,961: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 20:53:31,962: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 20:53:31,962: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 20:53:36,104: INFO: retriever]: Loading Vector Database
+[2026-03-29 20:53:36,105: INFO: graph]: Graph Built Successfully
+[2026-03-29 20:53:36,106: INFO: chat]: Chat Initialized Successfully
+[2026-03-29 20:53:36,107: INFO: chat_endpoints]: Received chat request: messages='Who is the ceo?' user_id='123' session_id='12345'
+[2026-03-29 20:53:36,107: INFO: chat]: Start Chat
+[2026-03-29 20:53:36,711: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-29 21:14:29,522: INFO: voice]: Initializing Whisper Model....
+[2026-03-29 21:14:30,359: INFO: transcribe]: Processing audio with duration 00:08.762
+[2026-03-29 21:14:30,873: INFO: transcribe]: Detected language 'en' with probability 1.00
+[2026-03-29 21:34:30,627: INFO: voice]: Initializing Whisper Model....
+[2026-03-29 21:34:31,535: INFO: transcribe]: Processing audio with duration 01:00.000
+[2026-03-29 21:34:32,060: INFO: transcribe]: Detected language 'en' with probability 1.00
+[2026-03-29 21:38:31,522: INFO: voice]: Initializing Whisper Model....
+[2026-03-29 21:38:32,358: INFO: transcribe]: Processing audio with duration 00:08.762
+[2026-03-29 21:38:32,877: INFO: transcribe]: Detected language 'en' with probability 1.00
+[2026-03-29 21:43:25,917: INFO: voice]: Initializing Whisper Model....
+[2026-03-29 21:43:26,777: INFO: transcribe]: Processing audio with duration 00:08.762
+[2026-03-29 21:43:27,284: INFO: transcribe]: Detected language 'en' with probability 1.00
+[2026-03-29 22:08:03,514: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-29 22:08:39,987: INFO: chat]: Initializing Chat
+[2026-03-29 22:08:39,987: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-29 22:08:40,099: INFO: graph]: Building ChatBot Graph
+[2026-03-29 22:08:40,099: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 22:08:40,101: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 22:08:40,101: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 22:08:44,547: INFO: retriever]: Loading Vector Database
+[2026-03-29 22:08:44,548: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-29 22:08:44,564: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-29 22:08:44,569: INFO: retriever]: Retriever Created Successfully
+[2026-03-29 22:08:44,569: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 22:08:44,573: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 22:08:44,573: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 22:08:48,708: INFO: retriever]: Loading Vector Database
+[2026-03-29 22:08:48,709: INFO: graph]: Graph Built Successfully
+[2026-03-29 22:08:48,710: INFO: chat]: Chat Initialized Successfully
+[2026-03-29 22:08:48,711: INFO: chat_endpoints]: Received voice chat request: 0.wav
+[2026-03-29 22:08:48,711: INFO: voice]: Initializing Whisper Model....
+[2026-03-29 22:08:49,489: INFO: transcribe]: Processing audio with duration 00:08.762
+[2026-03-29 22:08:49,994: INFO: transcribe]: Detected language 'en' with probability 1.00
+[2026-03-29 22:08:50,693: INFO: chat]: Start Chat
+[2026-03-29 22:08:51,272: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-29 22:10:35,969: INFO: chat_endpoints]: Received voice chat request: Record (online-voice-recorder.com) (2).mp3
+[2026-03-29 22:10:35,970: INFO: voice]: Initializing Whisper Model....
+[2026-03-29 22:10:36,745: INFO: transcribe]: Processing audio with duration 00:02.880
+[2026-03-29 22:10:37,227: INFO: transcribe]: Detected language 'pt' with probability 0.27
+[2026-03-29 22:10:39,631: INFO: chat]: Start Chat
+[2026-03-29 22:10:41,633: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-29 22:12:00,185: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-29 22:12:24,247: INFO: chat]: Initializing Chat
+[2026-03-29 22:12:24,248: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-29 22:12:24,367: INFO: graph]: Building ChatBot Graph
+[2026-03-29 22:12:24,368: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 22:12:24,370: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 22:12:24,370: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 22:12:28,648: INFO: retriever]: Loading Vector Database
+[2026-03-29 22:12:28,650: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-29 22:12:28,662: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-29 22:12:28,667: INFO: retriever]: Retriever Created Successfully
+[2026-03-29 22:12:28,667: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-29 22:12:28,670: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-29 22:12:28,670: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-29 22:12:32,685: INFO: retriever]: Loading Vector Database
+[2026-03-29 22:12:32,686: INFO: graph]: Graph Built Successfully
+[2026-03-29 22:12:32,688: INFO: chat]: Chat Initialized Successfully
+[2026-03-29 22:12:32,688: INFO: chat_endpoints]: Received voice chat request: Record (online-voice-recorder.com) (3).mp3
+[2026-03-29 22:12:32,688: INFO: voice]: Initializing Whisper Model....
+[2026-03-29 22:12:33,387: INFO: transcribe]: Processing audio with duration 00:02.472
+[2026-03-29 22:12:33,759: INFO: transcribe]: Detected language 'en' with probability 0.43
+[2026-03-29 22:12:34,180: INFO: chat]: Start Chat
+[2026-03-29 22:12:35,760: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
