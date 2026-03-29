@@ -19,7 +19,7 @@ app.include_router(chat_endpoints.router)
 
 @app.get("/")
 async def read_root():
-    return {"message": "ChatBot API"}
+    return {"message": "Voice Chatbot API"}
 
 
 if __name__ == "__main__":
