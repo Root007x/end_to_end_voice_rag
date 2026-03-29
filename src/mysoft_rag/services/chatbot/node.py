@@ -1,6 +1,7 @@
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_classic.chains import create_retrieval_chain
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
+from langchain_core.messages import AIMessage
 
 from src.mysoft_rag.utils.logger import logger
 from src.mysoft_rag.services.chatbot.retriever import Retriever
@@ -60,14 +61,22 @@ class ChatBotNode:
             )  # higher is better
 
             _, top_score = docs_and_scores[0]
-            confidence_percent = float(round(float(top_score * 100), 2))
+            confidence_percent = (
+                float(round(float(top_score * 100), 2))
+                if float(round(float(top_score * 100), 2)) > 0.0
+                else 0.0
+            )
             # print(f"Confidence: {confidence_percent:.2f}%")
 
             response = rag_chain.invoke(
                 {"chat_history": chat_history, "input": current_input}
             )
+            print(response)
 
-            return {"messages": [response["answer"]], "confidence": confidence_percent}
+            return {
+                "messages": [AIMessage(content=response["answer"])],
+                "confidence": confidence_percent,
+            }
 
         except Exception as e:
             logger.error(f"Error invoking LLM: {e}")

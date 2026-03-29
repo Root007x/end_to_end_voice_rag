@@ -10,3 +10,8 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     messages: str
     session_id: str
+
+
+class HistoryModel(BaseModel):
+    user_id: str
+    session_id: str

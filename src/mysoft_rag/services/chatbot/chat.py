@@ -16,7 +16,7 @@ class InitChat:
     def initialize_chat(self):
         try:
             logger.info("Initializing Chat")
-            self.checkpointer = MemorySaver()
+            self.checkpointer = MemorySaver()  # checkpoint memory saver
             self.llm = GroqLLM().get_llm()
             self.graph = GraphBuilder(
                 model=self.llm, checkpointer=self.checkpointer
@@ -33,6 +33,7 @@ class InitChat:
             input_data = {"messages": [HumanMessage(content=prompt)]}
 
             result = self.graph.invoke(input_data, config)
+            print(result)
             final_result = result["messages"][-1].content
             confidence = result.get("confidence", None)
 
@@ -40,3 +41,25 @@ class InitChat:
         except Exception as e:
             logger.error(f"Chat functionality not working: {e}")
             return None
+
+    async def get_chat_history(self, thread_id: str):
+        try:
+            logger.info(f"Getting chat history for session {thread_id}")
+            config = {"configurable": {"thread_id": thread_id}}
+            state = await self.graph.aget_state(config)
+
+            if state.values:
+                return [
+                    {
+                        "role": "user"
+                        if isinstance(msg, HumanMessage)
+                        else "assistant",
+                        "content": msg.content,
+                    }
+                    for msg in state.values["messages"]
+                ]
+
+        except Exception as e:
+            logger.error(f"Failed to get chat history for session {thread_id}: {e}")
+            return None
+        return []

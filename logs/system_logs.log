@@ -537,3 +537,120 @@
 [2026-03-30 00:50:00,457: INFO: chat_endpoints]: Received chat request: messages='who was coined in 1959 machine learning?' user_id='string' session_id='string'
 [2026-03-30 00:50:00,457: INFO: chat]: Start Chat
 [2026-03-30 00:50:01,097: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 00:59:31,418: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 01:00:02,253: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 01:00:31,473: INFO: chat]: Initializing Chat
+[2026-03-30 01:00:31,474: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-30 01:00:31,586: INFO: graph]: Building ChatBot Graph
+[2026-03-30 01:00:31,586: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:00:31,588: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:00:31,588: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:00:35,134: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:00:35,135: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-30 01:00:35,149: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-30 01:00:35,160: INFO: retriever]: Retriever Created Successfully
+[2026-03-30 01:00:35,160: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:00:35,162: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:00:35,162: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:00:38,521: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:00:38,526: INFO: graph]: Graph Built Successfully
+[2026-03-30 01:00:38,529: INFO: chat]: Chat Initialized Successfully
+[2026-03-30 01:00:38,529: INFO: chat_endpoints]: Received chat history request: user_id='string' session_id='string'
+[2026-03-30 01:00:38,529: INFO: chat]: Getting chat history for session string_string
+[2026-03-30 01:00:38,529: ERROR: chat]: Failed to get chat history for session string_string: 'coroutine' object has no attribute 'values'
+[2026-03-30 01:04:16,342: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 01:04:41,631: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 01:04:53,586: INFO: chat]: Initializing Chat
+[2026-03-30 01:04:53,587: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-30 01:04:53,698: INFO: graph]: Building ChatBot Graph
+[2026-03-30 01:04:53,698: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:04:53,700: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:04:53,700: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:04:57,718: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:04:57,720: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-30 01:04:57,732: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-30 01:04:57,745: INFO: retriever]: Retriever Created Successfully
+[2026-03-30 01:04:57,745: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:04:57,747: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:04:57,747: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:05:01,557: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:05:01,562: INFO: graph]: Graph Built Successfully
+[2026-03-30 01:05:01,565: INFO: chat]: Chat Initialized Successfully
+[2026-03-30 01:05:01,565: INFO: chat_endpoints]: Received chat history request: user_id='string' session_id='string'
+[2026-03-30 01:05:01,565: INFO: chat]: Getting chat history for session string_string
+[2026-03-30 01:05:20,291: INFO: chat_endpoints]: Received chat request: messages='who are u?' user_id='string' session_id='string'
+[2026-03-30 01:05:20,292: INFO: chat]: Start Chat
+[2026-03-30 01:05:21,134: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 01:05:49,150: INFO: chat_endpoints]: Received chat history request: user_id='string' session_id='string'
+[2026-03-30 01:05:49,150: INFO: chat]: Getting chat history for session string_string
+[2026-03-30 01:10:22,656: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 01:10:27,370: INFO: chat]: Initializing Chat
+[2026-03-30 01:10:27,370: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-30 01:10:27,477: INFO: graph]: Building ChatBot Graph
+[2026-03-30 01:10:27,477: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:10:27,480: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:10:27,480: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:10:31,375: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:10:31,377: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-30 01:10:31,392: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-30 01:10:31,404: INFO: retriever]: Retriever Created Successfully
+[2026-03-30 01:10:31,404: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:10:31,406: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:10:31,406: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:10:35,166: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:10:35,171: INFO: graph]: Graph Built Successfully
+[2026-03-30 01:10:35,173: INFO: chat]: Chat Initialized Successfully
+[2026-03-30 01:10:35,173: INFO: chat_endpoints]: Received chat request: messages='who are u?' user_id='string' session_id='string'
+[2026-03-30 01:10:35,173: INFO: chat]: Start Chat
+[2026-03-30 01:10:35,928: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 01:12:22,013: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 01:12:26,342: INFO: chat]: Initializing Chat
+[2026-03-30 01:12:26,343: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-30 01:12:26,455: INFO: graph]: Building ChatBot Graph
+[2026-03-30 01:12:26,456: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:12:26,458: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:12:26,458: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:12:29,953: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:12:29,954: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-30 01:12:29,967: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-30 01:12:29,978: INFO: retriever]: Retriever Created Successfully
+[2026-03-30 01:12:29,979: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:12:29,980: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:12:29,980: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:12:33,309: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:12:33,314: INFO: graph]: Graph Built Successfully
+[2026-03-30 01:12:33,322: INFO: chat]: Chat Initialized Successfully
+[2026-03-30 01:12:33,322: INFO: chat_endpoints]: Received chat request: messages='who are u?' user_id='string' session_id='string'
+[2026-03-30 01:12:33,322: INFO: chat]: Start Chat
+[2026-03-30 01:12:34,009: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 01:14:16,936: INFO: chat_endpoints]: Received chat history request: user_id='string' session_id='string'
+[2026-03-30 01:14:16,936: INFO: chat]: Getting chat history for session string_string
+[2026-03-30 01:16:07,961: INFO: chat_endpoints]: Received chat history request: user_id='strings' session_id='strings'
+[2026-03-30 01:16:07,961: INFO: chat]: Getting chat history for session strings_strings
+[2026-03-30 01:16:12,391: INFO: chat_endpoints]: Received chat history request: user_id='string' session_id='string'
+[2026-03-30 01:16:12,391: INFO: chat]: Getting chat history for session string_string
+[2026-03-30 01:17:18,294: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-03-30 01:17:25,807: INFO: chat]: Initializing Chat
+[2026-03-30 01:17:25,807: INFO: groq_llm]: Initializing Groq LLM....
+[2026-03-30 01:17:25,917: INFO: graph]: Building ChatBot Graph
+[2026-03-30 01:17:25,917: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:17:25,919: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:17:25,920: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:17:29,443: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:17:29,444: INFO: loader]: Loading faiss with AVX2 support.
+[2026-03-30 01:17:29,459: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-03-30 01:17:29,473: INFO: retriever]: Retriever Created Successfully
+[2026-03-30 01:17:29,473: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-03-30 01:17:29,476: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-03-30 01:17:29,476: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-03-30 01:17:32,823: INFO: retriever]: Loading Vector Database
+[2026-03-30 01:17:32,828: INFO: graph]: Graph Built Successfully
+[2026-03-30 01:17:32,830: INFO: chat]: Chat Initialized Successfully
+[2026-03-30 01:17:32,831: INFO: chat_endpoints]: Received chat request: messages='who are u?' user_id='string' session_id='string'
+[2026-03-30 01:17:32,831: INFO: chat]: Start Chat
+[2026-03-30 01:17:33,433: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 01:17:45,539: INFO: chat_endpoints]: Received chat request: messages='what is ML?' user_id='string' session_id='string'
+[2026-03-30 01:17:45,539: INFO: chat]: Start Chat
+[2026-03-30 01:17:46,067: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-03-30 01:17:58,043: INFO: chat_endpoints]: Received chat history request: user_id='string' session_id='string'
+[2026-03-30 01:17:58,043: INFO: chat]: Getting chat history for session string_string

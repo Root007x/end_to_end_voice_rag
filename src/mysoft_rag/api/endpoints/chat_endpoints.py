@@ -6,7 +6,7 @@ from uuid import uuid4
 from src.mysoft_rag.services.chatbot.voice import VoiceService
 from src.mysoft_rag.services.chatbot.vector_store_data import VectorStore
 from src.mysoft_rag.services.chatbot.chat import InitChat
-from src.mysoft_rag.schemas.schema import ChatRequest
+from src.mysoft_rag.schemas.schema import ChatRequest, HistoryModel
 from src.mysoft_rag.utils.logger import logger
 
 
@@ -86,6 +86,22 @@ async def voice_chat(
 
     except Exception as e:
         logger.error(f"Error in voice chat endpoint: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/chat_history")
+async def chat_history(
+    request: HistoryModel, init_chat: InitChat = Depends(get_chat_instance)
+):
+    try:
+        logger.info(f"Received chat history request: {request}")
+        full_id = f"{request.user_id}_{request.session_id}"
+
+        respond = await init_chat.get_chat_history(full_id)
+
+        return JSONResponse(status_code=200, content=respond)
+    except Exception as e:
+        logger.error(f"Error in chat history endpoint: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
