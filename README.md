@@ -6,7 +6,7 @@ An intelligent Voice-to-Voice RAG (Retrieval-Augmented Generation) application b
 
 ```mermaid
 graph TD
-    User([User]) -- "1. Speaks into Mic" --> SL(Streamlit Interface)
+    User([User]) -- "1. Speaks into Mic" --> SL(Streamlit Interface or Frontend Interface)
     SL -- "2. Sends Audio Data" --> API(FastAPI Backend)
     
     subgraph "FastAPI Logic"
