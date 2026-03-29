@@ -34,8 +34,9 @@ class InitChat:
 
             result = self.graph.invoke(input_data, config)
             final_result = result["messages"][-1].content
+            confidence = result.get("confidence", None)
 
-            return final_result
+            return final_result, confidence
         except Exception as e:
             logger.error(f"Chat functionality not working: {e}")
             return None

@@ -6,3 +6,4 @@ from typing import Sequence, Annotated
 
 class State(TypedDict):
     messages: Annotated[Sequence[BaseMessage], add_messages]
+    confidence: float

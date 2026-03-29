@@ -40,10 +40,15 @@ async def chat(request: ChatRequest, init_chat: InitChat = Depends(get_chat_inst
         user_id = request.user_id
         full_id = f"{user_id}_{session_id}"
 
-        respond = init_chat.chat(request.messages, full_id)
+        respond, confidence = init_chat.chat(request.messages, full_id)
 
         return JSONResponse(
-            status_code=200, content={"messages": respond, "session_id": session_id}
+            status_code=200,
+            content={
+                "messages": respond,
+                "confidence_score": confidence,
+                "session_id": session_id,
+            },
         )
 
     except Exception as e:
@@ -68,10 +73,15 @@ async def voice_chat(
         audio_bytes = await audio.read()
         transcript = await voice_service.transcribe_audio(audio_bytes)  # STT
         print(f"Transcribed text: {transcript}")
-        respond = init_chat.chat(transcript, full_id)
+        respond, confidence = init_chat.chat(transcript, full_id)
 
         return JSONResponse(
-            status_code=200, content={"messages": respond, "session_id": session_id}
+            status_code=200,
+            content={
+                "messages": respond,
+                "confidence_score": confidence,
+                "session_id": session_id,
+            },
         )
 
     except Exception as e:

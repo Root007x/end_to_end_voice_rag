@@ -52,29 +52,22 @@ class ChatBotNode:
             qa_chain = create_stuff_documents_chain(llm=self.llm, prompt=prompt)
             rag_chain = create_retrieval_chain(self.retriever, qa_chain)
 
-            # docs_and_scores = self.load_vectore_store.similarity_search_with_score(
-            #     current_input
-            # )
-            # _, top_score = docs_and_scores[0]
-            # print(top_score)
+            #  calculate confidence score for the current input
+            docs_and_scores = (
+                self.load_vectore_store.similarity_search_with_relevance_scores(
+                    current_input
+                )
+            )  # higher is better
 
-            # CONF_THRESHOLD = 1.0  # similarity threshold
-
-            # if CONF_THRESHOLD < top_score:
-            #     return {
-            #         "messages": [
-            #             {
-            #                 "role": "assistant",
-            #                 "content": "I’m not confident about that. Could you clarify or ask another question?",
-            #             }
-            #         ]
-            #     }
+            _, top_score = docs_and_scores[0]
+            confidence_percent = float(round(float(top_score * 100), 2))
+            # print(f"Confidence: {confidence_percent:.2f}%")
 
             response = rag_chain.invoke(
                 {"chat_history": chat_history, "input": current_input}
             )
 
-            return {"messages": [response["answer"]]}
+            return {"messages": [response["answer"]], "confidence": confidence_percent}
 
         except Exception as e:
             logger.error(f"Error invoking LLM: {e}")
