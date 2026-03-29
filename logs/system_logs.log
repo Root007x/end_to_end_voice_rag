@@ -807,3 +807,4 @@
 [2026-03-30 02:29:40,802: INFO: voice]: Converting text to speech...
 [2026-03-30 02:30:08,344: INFO: chat_endpoints]: Received chat history request: user_id='default_user' session_id='default_session'
 [2026-03-30 02:30:08,344: INFO: chat]: Getting chat history for session default_user_default_session
+[2026-03-30 04:53:35,455: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.

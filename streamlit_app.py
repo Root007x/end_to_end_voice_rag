@@ -20,27 +20,27 @@ user_id = st.sidebar.text_input("User ID", value="default_user")
 session_id = st.sidebar.text_input("Session ID", value="default_session")
 
 # Text Chat Section
-st.header("Text Chat")
-message = st.text_area("Enter your message")
-if st.button("Send Text Message"):
-    if message.strip():
-        payload = {"messages": message, "user_id": user_id, "session_id": session_id}
-        try:
-            response = requests.post("http://localhost:8000/chat", json=payload)
-            if response.status_code == 200:
-                data = response.json()
-                st.success("Response received!")
+# st.header("Text Chat")
+# message = st.text_area("Enter your message")
+# if st.button("Send Text Message"):
+#     if message.strip():
+#         payload = {"messages": message, "user_id": user_id, "session_id": session_id}
+#         try:
+#             response = requests.post("http://localhost:8000/chat", json=payload)
+#             if response.status_code == 200:
+#                 data = response.json()
+#                 st.success("Response received!")
 
-                with st.chat_message("assistant"):
-                    st.write_stream(stream_data(data["messages"]))
+#                 with st.chat_message("assistant"):
+#                     st.write_stream(stream_data(data["messages"]))
 
-                st.write("**Confidence Score:**", data["confidence_score"])
-            else:
-                st.error(f"Error: {response.status_code} - {response.text}")
-        except Exception as e:
-            st.error(f"Failed to connect: {str(e)}")
-    else:
-        st.warning("Please enter a message.")
+#                 st.write("**Confidence Score:**", data["confidence_score"])
+#             else:
+#                 st.error(f"Error: {response.status_code} - {response.text}")
+#         except Exception as e:
+#             st.error(f"Failed to connect: {str(e)}")
+#     else:
+#         st.warning("Please enter a message.")
 
 # Voice Chat Section
 st.header("Voice Chat")
