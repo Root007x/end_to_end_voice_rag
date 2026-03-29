@@ -9,13 +9,16 @@ class GroqLLM:
     def __init__(self):
         self.groq_api_key = setting.GROQ_API_KEY
         self.model_name = config.groqai.model
+        self.temp = config.groqai.temperature
         self.embedding_model = config.groqai.embedding_model
 
     def get_llm(self):
         try:
             logger.info("Initializing Groq LLM....")
 
-            llm = ChatGroq(api_key=self.groq_api_key, model=self.model_name)
+            llm = ChatGroq(
+                api_key=self.groq_api_key, model=self.model_name, temperature=self.temp
+            )
 
             return llm
         except Exception as e:

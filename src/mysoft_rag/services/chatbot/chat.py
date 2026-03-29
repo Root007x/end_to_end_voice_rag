@@ -33,7 +33,6 @@ class InitChat:
             input_data = {"messages": [HumanMessage(content=prompt)]}
 
             result = self.graph.invoke(input_data, config)
-            print(result)
             final_result = result["messages"][-1].content
             confidence = result.get("confidence", None)
 

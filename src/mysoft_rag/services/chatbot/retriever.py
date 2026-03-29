@@ -23,8 +23,16 @@ class Retriever:
                     allow_dangerous_deserialization=True,
                 )
 
+                # retriever = load_vector_store.as_retriever(
+                #     search_type="similarity", search_kwargs={"k": 5}
+                # )
                 retriever = load_vector_store.as_retriever(
-                    search_type="similarity", search_kwargs={"k": 5}
+                    search_type="mmr",
+                    search_kwargs={
+                        "k": 4,  # final docs returned
+                        "fetch_k": 20,  # initial candidates to consider
+                        "lambda_mult": 0.5,  # diversity factor
+                    },
                 )
                 logger.info("Retriever Created Successfully")
 
