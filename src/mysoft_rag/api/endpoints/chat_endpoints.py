@@ -85,6 +85,7 @@ async def voice_chat(
         return JSONResponse(
             status_code=200,
             content={
+                "transcript": transcript,
                 "messages": respond,
                 "confidence_score": confidence,
                 "session_id": session_id,

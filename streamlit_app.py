@@ -9,7 +9,7 @@ from streamlit_mic_recorder import mic_recorder
 def stream_data(text):
     for word in text.split(" "):
         yield word + " "
-        time.sleep(0.04)
+        time.sleep(0.05)  # Simulate streaming delay
 
 
 st.title("Voice RAG Chatbot")
@@ -62,6 +62,9 @@ if audio:
                 if response.status_code == 200:
                     data = response.json()
                     st.success("Voice processed!")
+
+                    with st.chat_message("user"):
+                        st.write(f"**User:** {data['transcript']}")
 
                     with st.chat_message("assistant"):
                         st.write_stream(stream_data(data["messages"]))
