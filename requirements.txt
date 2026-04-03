@@ -23,3 +23,5 @@ soundfile
 pydub
 requests
 edge-tts
+redis
+asyncio

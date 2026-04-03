@@ -3,12 +3,14 @@ from fastapi.params import Depends
 from fastapi.responses import JSONResponse
 from uuid import uuid4
 import base64
+import hashlib
 
 from src.mysoft_rag.services.chatbot.voice import VoiceService
 from src.mysoft_rag.services.chatbot.vector_store_data import VectorStore
 from src.mysoft_rag.services.chatbot.chat import InitChat
 from src.mysoft_rag.schemas.schema import ChatRequest, HistoryModel
 from src.mysoft_rag.utils.logger import logger
+from src.mysoft_rag.services.chatbot.redis_client import set_cache, get_cache
 
 
 router = APIRouter()
@@ -41,15 +43,33 @@ async def chat(request: ChatRequest, init_chat: InitChat = Depends(get_chat_inst
         user_id = request.user_id
         full_id = f"{user_id}_{session_id}"
 
+        # cache setup
+        query_str = str(request.messages)
+        cache_key = f"chat:{full_id}:{hashlib.md5(query_str.encode()).hexdigest()}"
+
+        # check cache
+        cached_response = await get_cache(cache_key)
+        if cached_response:
+            print("### Using cached response...")
+            return JSONResponse(status_code=200, content=cached_response)
+
+        # llm response
         respond, confidence = init_chat.chat(request.messages, full_id)
+
+        respond_data = {
+            "messages": respond,
+            "confidence_score": confidence,
+            "session_id": session_id,
+        }
+
+        # set cache
+        await set_cache(
+            key=cache_key, value=respond_data, expire=1800
+        )  # cache for 30 mins
 
         return JSONResponse(
             status_code=200,
-            content={
-                "messages": respond,
-                "confidence_score": confidence,
-                "session_id": session_id,
-            },
+            content=respond_data,
         )
 
     except Exception as e:
