@@ -27,6 +27,7 @@ graph TD
 - **TTS (Text-to-Speech):** AI answers are converted to voice using `edge-tts`.
 - **ChatGPT-Style UI:** Interactive Streamlit interface with a typing effect (streaming) for responses.
 - **FastAPI-Backend:** High-performance asynchronous API to handle all AI processing.
+- **Caching:** Redis-based caching for chat responses to reduce latency and API costs.
 
 ## 🛠️ Requirements
 
@@ -69,6 +70,43 @@ GROQ_API_KEY=your_groq_api_key_here
 
 *(Check `config/config.yaml` to adjust models or data sources like PDF locations and URLs).*
 
+## 🐳 Setting up Redis with Docker for Caching
+
+The application uses Redis for caching chat responses to improve performance. To set up Redis using Docker:
+
+### 1. Install Docker
+
+Ensure Docker is installed on your system. Download from [docker.com](https://www.docker.com/).
+
+### 2. Run Redis Container
+
+Open a terminal and run the following command to start a Redis server in a Docker container:
+
+```bash
+docker run -d --name redis-cache -p 6379:6379 redis
+```
+
+This will:
+- Pull the Redis image
+- Run it in detached mode (-d)
+- Name the container `redis-cache`
+- Map port 6379 on your host to port 6379 in the container
+
+### 3. Verify Redis is Running
+
+Check if the container is running:
+
+```bash
+docker ps
+```
+
+You should see `redis-cache` in the list.
+
+### 4. Connect the Application
+
+The application is configured to connect to Redis at `localhost:6379` by default. With the container running, the caching will work automatically when you start the FastAPI backend.
+```
+
 ## 🏎️ How to Run
 
 To get the full system running, you need to start the backend first, then the frontend.
@@ -106,7 +144,7 @@ streamlit run streamlit_app.py
 - **Processing Latency:** There is a noticeable delay between speaking and receiving a response due to the sequential pipeline: STT → Vector Search → LLM Generation → TTS Generation.
 - **Sequential Processing:** Currently, requests are processed one by one. Concurrent users may experience delays as heavy CPU tasks (like Whisper transcription and vector search) block the server's main execution thread.
 - **Online TTS:** The application uses `edge-tts`, which requires an active internet connection and does not support offline voice generation.
-- **Volatile Memory:** Chat history is stored in-memory (`MemorySaver`). It is not persistent and will be lost if the FastAPI server is restarted.
+- **Volatile Memory:** Chat history is stored in-memory (`MemorySaver`). It is not persistent and will be lost if the FastAPI server is restarted. However, chat responses are cached in Redis for 30 minutes to improve performance.
 
 ## 📂 Project Structure
 
