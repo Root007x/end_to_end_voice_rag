@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi_limiter import FastAPILimiter
 from fastapi.middleware.cors import CORSMiddleware
 import redis.asyncio as redis
 import uvicorn
@@ -26,6 +27,7 @@ async def startup_event():
         decode_responses=True,
     )
     await init_redis(app)
+    await FastAPILimiter.init(app.state.redis_client)
 
 
 @app.on_event("shutdown")

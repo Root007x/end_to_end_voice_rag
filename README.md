@@ -28,6 +28,7 @@ graph TD
 - **ChatGPT-Style UI:** Interactive Streamlit interface with a typing effect (streaming) for responses.
 - **FastAPI-Backend:** High-performance asynchronous API to handle all AI processing.
 - **Caching:** Redis-based caching for chat responses to reduce latency and API costs.
+- **Rate Limiting:** Protects the API from abuse with configurable request limits per user.
 
 ## 🛠️ Requirements
 

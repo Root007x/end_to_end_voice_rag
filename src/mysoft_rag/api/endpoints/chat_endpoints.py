@@ -1,5 +1,6 @@
-from fastapi import APIRouter, HTTPException, UploadFile, File, Form
+from fastapi import APIRouter, HTTPException, UploadFile, File, Form, Request
 from fastapi.params import Depends
+from fastapi_limiter.depends import RateLimiter
 from fastapi.responses import JSONResponse
 from uuid import uuid4
 import base64
@@ -35,16 +36,26 @@ async def get_voice_instance():
     return voice_instance
 
 
+async def get_user_identifier(request: Request):
+    return request.headers.get("X-User-ID") or request.client.host
+
+
 @router.post("/chat")
-async def chat(request: ChatRequest, init_chat: InitChat = Depends(get_chat_instance)):
+async def chat(
+    chat_req: ChatRequest,
+    init_chat: InitChat = Depends(get_chat_instance),
+    rate_limit: None = Depends(
+        RateLimiter(times=5, seconds=60, identifier=get_user_identifier)
+    ),
+):
     try:
-        logger.info(f"Received chat request: {request}")
-        session_id = request.session_id or uuid4()
-        user_id = request.user_id
+        logger.info(f"Received chat request: {chat_req}")
+        session_id = chat_req.session_id or uuid4()
+        user_id = chat_req.user_id
         full_id = f"{user_id}_{session_id}"
 
         # cache setup
-        query_str = str(request.messages)
+        query_str = str(chat_req.messages)
         cache_key = f"chat:{full_id}:{hashlib.md5(query_str.encode()).hexdigest()}"
 
         # check cache
@@ -54,7 +65,7 @@ async def chat(request: ChatRequest, init_chat: InitChat = Depends(get_chat_inst
             return JSONResponse(status_code=200, content=cached_response)
 
         # llm response
-        respond, confidence = init_chat.chat(request.messages, full_id)
+        respond, confidence = init_chat.chat(chat_req.messages, full_id)
 
         respond_data = {
             "messages": respond,

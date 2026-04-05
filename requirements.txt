@@ -25,3 +25,4 @@ requests
 edge-tts
 redis
 asyncio
+fastapi-limiter==0.1.6
