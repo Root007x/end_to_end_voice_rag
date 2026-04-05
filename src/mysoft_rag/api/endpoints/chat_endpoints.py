@@ -77,10 +77,10 @@ async def chat(
     rate_limit: None = Depends(
         RateLimiter(times=5, seconds=60, identifier=get_user_identifier)
     ),
-    token: str = Depends(oauth2_scheme),
+    # token: str = Depends(oauth2_scheme),
 ):
     try:
-        verify_token(token)
+        # verify_token(token)
         logger.info(f"Received chat request: {chat_req}")
         session_id = chat_req.session_id or uuid4()
         user_id = chat_req.user_id
