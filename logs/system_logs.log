@@ -1681,3 +1681,57 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 [2026-04-05 15:09:22,135: INFO: chat_endpoints]: Received chat request: messages='hi' user_id='hasan' session_id='123'
 [2026-04-05 15:09:22,871: INFO: chat_endpoints]: Received chat request: messages='hi' user_id='hasan' session_id='123'
 [2026-04-05 15:14:05,539: INFO: chat_endpoints]: Received chat request: messages='hi' user_id='hasan' session_id='123'
+[2026-04-06 01:42:31,188: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-06 01:43:02,223: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-06 01:43:44,923: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-06 01:44:14,613: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-06 01:44:45,771: INFO: chat]: Initializing Chat
+[2026-04-06 01:44:45,771: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-06 01:44:45,936: INFO: graph]: Building ChatBot Graph
+[2026-04-06 01:44:45,936: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-06 01:44:45,938: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-06 01:44:45,938: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-06 01:44:50,095: INFO: retriever]: Loading Vector Database
+[2026-04-06 01:44:50,098: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-06 01:44:50,260: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-06 01:44:50,292: INFO: retriever]: Retriever Created Successfully
+[2026-04-06 01:44:50,292: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-06 01:44:50,294: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-06 01:44:50,294: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-06 01:44:54,110: INFO: retriever]: Loading Vector Database
+[2026-04-06 01:44:54,115: INFO: graph]: Graph Built Successfully
+[2026-04-06 01:44:54,118: INFO: chat]: Chat Initialized Successfully
+[2026-04-06 01:45:23,710: WARNING: bcrypt]: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\mahad\Desktop\end_to_end_voice_rag\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2026-04-06 01:49:50,324: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-06 01:50:48,373: WARNING: bcrypt]: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\mahad\Desktop\end_to_end_voice_rag\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2026-04-06 01:59:37,731: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-06 02:08:36,553: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-06 02:10:59,121: INFO: chat]: Initializing Chat
+[2026-04-06 02:10:59,121: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-06 02:10:59,236: INFO: graph]: Building ChatBot Graph
+[2026-04-06 02:10:59,236: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-06 02:10:59,238: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-06 02:10:59,238: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-06 02:11:03,287: INFO: retriever]: Loading Vector Database
+[2026-04-06 02:11:03,288: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-06 02:11:03,302: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-06 02:11:03,314: INFO: retriever]: Retriever Created Successfully
+[2026-04-06 02:11:03,314: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-06 02:11:03,315: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-06 02:11:03,315: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-06 02:11:07,132: INFO: retriever]: Loading Vector Database
+[2026-04-06 02:11:07,137: INFO: graph]: Graph Built Successfully
+[2026-04-06 02:11:07,139: INFO: chat]: Chat Initialized Successfully
+[2026-04-06 02:11:07,142: INFO: chat_endpoints]: Received chat request: messages='hi' user_id='string' session_id='1234'
+[2026-04-06 02:11:07,142: INFO: chat]: Start Chat
+[2026-04-06 02:11:07,577: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

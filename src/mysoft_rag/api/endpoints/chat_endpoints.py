@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, UploadFile, File, Form, Request
 from fastapi.params import Depends
 from fastapi_limiter.depends import RateLimiter
 from fastapi.responses import JSONResponse
+from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from uuid import uuid4
 import base64
 import hashlib
@@ -12,9 +13,13 @@ from src.mysoft_rag.services.chatbot.chat import InitChat
 from src.mysoft_rag.schemas.schema import ChatRequest, HistoryModel
 from src.mysoft_rag.utils.logger import logger
 from src.mysoft_rag.services.chatbot.redis_client import set_cache, get_cache
+from src.mysoft_rag.jwt_auth.models import RegisterRequest, TokenResponse
+from src.mysoft_rag.jwt_auth.auth import create_access_token, verify_token
+from src.mysoft_rag.jwt_auth.db import users_db, hash_password, verify_password
 
 
 router = APIRouter()
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 
 chat_instance = None
@@ -40,6 +45,31 @@ async def get_user_identifier(request: Request):
     return request.headers.get("X-User-ID") or request.client.host
 
 
+# register
+@router.post("/register")
+async def register(req: RegisterRequest):
+    if req.username in users_db:
+        raise HTTPException(status_code=400, detail="Username already exists")
+    users_db[req.username] = {
+        "username": req.username,
+        "password": hash_password(req.password),
+    }
+    return {"message": "User registered successfully"}
+
+
+# login
+@router.post("/login", response_model=TokenResponse)
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    user = users_db.get(form_data.username)
+    if not user or not verify_password(form_data.password, user["password"]):
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+    token = create_access_token(form_data.username)
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+    }
+
+
 @router.post("/chat")
 async def chat(
     chat_req: ChatRequest,
@@ -47,8 +77,10 @@ async def chat(
     rate_limit: None = Depends(
         RateLimiter(times=5, seconds=60, identifier=get_user_identifier)
     ),
+    token: str = Depends(oauth2_scheme),
 ):
     try:
+        verify_token(token)
         logger.info(f"Received chat request: {chat_req}")
         session_id = chat_req.session_id or uuid4()
         user_id = chat_req.user_id

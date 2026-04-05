@@ -27,6 +27,7 @@ graph TD
 - **TTS (Text-to-Speech):** AI answers are converted to voice using `edge-tts`.
 - **ChatGPT-Style UI:** Interactive Streamlit interface with a typing effect (streaming) for responses.
 - **FastAPI-Backend:** High-performance asynchronous API to handle all AI processing.
+- **JWT Authentication:** Secure user access with JSON Web Token-based auth for protected endpoints.
 - **Caching:** Redis-based caching for chat responses to reduce latency and API costs.
 - **Rate Limiting:** Protects the API from abuse with configurable request limits per user.
 

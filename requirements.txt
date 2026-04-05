@@ -26,3 +26,6 @@ edge-tts
 redis
 asyncio
 fastapi-limiter==0.1.6
+python-jose[cryptography] 
+passlib[bcrypt]
+passlib[argon2]
