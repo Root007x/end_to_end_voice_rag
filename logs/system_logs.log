@@ -1735,3 +1735,741 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 [2026-04-06 02:11:07,142: INFO: chat_endpoints]: Received chat request: messages='hi' user_id='string' session_id='1234'
 [2026-04-06 02:11:07,142: INFO: chat]: Start Chat
 [2026-04-06 02:11:07,577: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-06 02:17:00,463: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-06 02:17:31,703: INFO: chat]: Initializing Chat
+[2026-04-06 02:17:31,703: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-06 02:17:31,854: INFO: graph]: Building ChatBot Graph
+[2026-04-06 02:17:31,854: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-06 02:17:31,856: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-06 02:17:31,856: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-06 02:17:35,866: INFO: retriever]: Loading Vector Database
+[2026-04-06 02:17:35,868: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-06 02:17:35,883: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-06 02:17:35,899: INFO: retriever]: Retriever Created Successfully
+[2026-04-06 02:17:35,899: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-06 02:17:35,901: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-06 02:17:35,901: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-06 02:17:39,687: INFO: retriever]: Loading Vector Database
+[2026-04-06 02:17:39,693: INFO: graph]: Graph Built Successfully
+[2026-04-06 02:17:39,696: INFO: chat]: Chat Initialized Successfully
+[2026-04-06 02:17:39,698: INFO: chat_endpoints]: Received chat request: messages='hi' user_id='string' session_id='string'
+[2026-04-06 02:17:39,698: INFO: chat]: Start Chat
+[2026-04-06 02:17:40,043: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 05:55:55,871: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 05:58:11,798: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 05:59:34,338: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:00:18,257: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:00:38,404: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:00:38,410: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:00:38,410: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:00:43,841: WARNING: file_download]: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2026-04-07 06:02:14,072: WARNING: file_download]: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2026-04-07 06:02:16,191: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 06:02:16,213: ERROR: preprocess_data]: Failed To Load PDF Data: [Errno 2] No such file or directory: 'src\\mysoft_rag\\data\\as_sunnah_fqa'
+[2026-04-07 06:02:16,213: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 06:02:17,631: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 06:02:17,632: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 06:02:17,632: ERROR: vector_store_data]: Failed To Vectorize Data: 'NoneType' object is not iterable
+[2026-04-07 06:04:35,973: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:04:45,051: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:04:45,054: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:04:45,054: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:04:49,815: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 06:04:49,846: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-04-07 06:04:50,831: INFO: document_converter]: Going to convert document batch...
+[2026-04-07 06:04:50,831: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash a6a2eef09bfdbd6bdaeaf15fcaebde59
+[2026-04-07 06:04:50,857: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:04:50,899: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-04-07 06:04:50,915: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:04:50,995: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-04-07 06:04:52,721: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:04:53,103: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-04-07 06:04:53,119: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:04:53,165: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-04-07 06:04:53,202: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:04:53,947: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:04:53,973: INFO: __init__]: Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2']
+[2026-04-07 06:04:54,433: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:04:54,986: INFO: base_pipeline]: Processing document as_sunnah_fqa.pdf
+[2026-04-07 06:04:56,760: INFO: document_converter]: Finished converting document as_sunnah_fqa.pdf in 6.93 sec.
+[2026-04-07 06:04:56,836: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-04-07 06:04:56,844: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 06:04:57,540: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 06:04:57,540: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 06:04:58,339: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:04:58,501: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:04:58,509: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-04-07 06:05:57,908: INFO: chat]: Initializing Chat
+[2026-04-07 06:05:57,909: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:05:58,080: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:05:58,080: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:05:58,082: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:05:58,082: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:06:02,698: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:06:02,699: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:06:02,699: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:06:02,701: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:06:02,701: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:06:07,290: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:06:07,291: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:06:07,293: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:06:07,294: INFO: chat_endpoints]: Received chat request: messages='as-sunnah foundation ki' user_id='hasan' session_id='1234'
+[2026-04-07 06:06:07,295: INFO: chat]: Start Chat
+[2026-04-07 06:06:09,181: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:06:36,658: INFO: chat_endpoints]: Received chat request: messages='ai engineer team kon floor a bosay' user_id='hasan' session_id='1234'
+[2026-04-07 06:06:36,658: INFO: chat]: Start Chat
+[2026-04-07 06:06:37,807: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:13:56,632: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:14:11,568: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:14:11,570: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:14:11,571: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:14:16,306: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 06:14:16,326: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-04-07 06:14:16,343: INFO: document_converter]: Going to convert document batch...
+[2026-04-07 06:14:16,344: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash a6a2eef09bfdbd6bdaeaf15fcaebde59
+[2026-04-07 06:14:16,361: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:14:16,364: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-04-07 06:14:16,379: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:14:16,383: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-04-07 06:14:16,585: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:14:16,869: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-04-07 06:14:16,884: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:14:16,888: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-04-07 06:14:16,893: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:14:17,533: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:14:17,536: INFO: __init__]: Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2']
+[2026-04-07 06:14:17,836: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:14:18,079: INFO: base_pipeline]: Processing document as_sunnah_fqa.pdf
+[2026-04-07 06:14:19,478: INFO: document_converter]: Finished converting document as_sunnah_fqa.pdf in 3.15 sec.
+[2026-04-07 06:14:19,500: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-04-07 06:14:19,508: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 06:14:20,344: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 06:14:20,344: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 06:14:21,190: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:14:21,207: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:14:21,214: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-04-07 06:15:12,974: INFO: chat]: Initializing Chat
+[2026-04-07 06:15:12,974: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:15:13,094: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:15:13,094: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:15:13,096: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:15:13,096: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:15:17,645: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:15:17,659: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:15:17,659: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:15:17,661: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:15:17,661: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:15:22,205: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:15:22,206: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:15:22,208: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:15:22,303: INFO: chat]: Start Chat
+[2026-04-07 06:15:23,041: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:17:10,763: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:17:20,727: INFO: chat]: Initializing Chat
+[2026-04-07 06:17:20,729: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:17:20,853: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:17:20,854: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:17:20,856: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:17:20,856: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:17:25,775: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:17:25,777: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:17:25,793: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:17:25,801: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:17:25,801: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:17:25,802: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:17:25,803: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:17:30,509: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:17:30,510: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:17:30,512: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:17:30,520: INFO: chat]: Start Chat
+[2026-04-07 06:17:31,358: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:23:02,790: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:23:17,334: INFO: chat]: Initializing Chat
+[2026-04-07 06:23:17,335: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:23:17,461: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:23:17,461: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:23:17,464: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:23:17,464: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:23:22,160: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:23:22,162: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:23:22,176: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:23:22,182: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:23:22,182: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:23:22,184: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:23:22,184: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:23:26,744: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:23:26,744: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:23:26,747: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:23:26,748: INFO: chat_endpoints]: Received chat request: messages='AI Engineer টিম কোন ফ্লোরে বসে' user_id='hasan' session_id='1234'
+[2026-04-07 06:23:40,618: INFO: chat_endpoints]: Received chat request: messages='AI Engineer টিম কোন ফ্লোরে বসে' user_id='mahadi' session_id='1234'
+[2026-04-07 06:23:40,619: INFO: chat]: Start Chat
+[2026-04-07 06:23:41,597: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:25:22,095: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:25:44,158: INFO: chat]: Initializing Chat
+[2026-04-07 06:25:44,159: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:25:44,291: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:25:44,291: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:25:44,294: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:25:44,294: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:25:49,059: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:25:49,060: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:25:49,074: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:25:49,082: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:25:49,082: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:25:49,083: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:25:49,083: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:25:54,112: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:25:54,113: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:25:54,115: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:25:54,116: INFO: chat_endpoints]: Received chat request: messages='AI Engineer টিম কোন ফ্লোরে বসে' user_id='sakib' session_id='1234'
+[2026-04-07 06:25:54,117: INFO: chat]: Start Chat
+[2026-04-07 06:25:54,733: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:29:30,045: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:30:01,831: INFO: chat]: Initializing Chat
+[2026-04-07 06:30:01,832: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:30:01,951: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:30:01,951: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:30:01,953: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:30:01,953: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:30:06,893: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:30:06,895: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:30:06,910: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:30:06,915: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:30:06,915: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:30:06,917: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:30:06,917: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:30:11,456: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:30:11,457: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:30:11,459: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:30:11,460: INFO: chat_endpoints]: Received chat request: messages='AI Engineer টিম কোন ফ্লোরে বসে' user_id='korim' session_id='1234'
+[2026-04-07 06:30:11,461: INFO: chat]: Start Chat
+[2026-04-07 06:30:12,231: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:31:18,553: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:31:40,977: INFO: chat]: Initializing Chat
+[2026-04-07 06:31:40,977: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:31:41,133: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:31:41,134: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:31:41,136: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:31:41,136: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:31:46,339: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:31:46,341: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:31:46,354: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:31:46,360: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:31:46,360: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:31:46,362: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:31:46,362: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:31:50,887: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:31:50,888: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:31:50,891: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:31:50,892: INFO: chat_endpoints]: Received chat request: messages='AI Engineer টিম কোন ফ্লোরে বসে' user_id='abir' session_id='1234'
+[2026-04-07 06:31:50,892: INFO: chat]: Start Chat
+[2026-04-07 06:31:51,745: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:37:09,807: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:37:44,852: INFO: chat]: Initializing Chat
+[2026-04-07 06:37:44,853: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:37:44,971: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:37:44,971: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:37:44,973: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:37:44,973: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:37:49,721: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:37:49,723: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:37:49,739: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:37:49,745: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:37:49,745: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:37:49,747: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:37:49,747: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 06:37:54,303: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:37:54,304: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:37:54,306: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:37:54,308: INFO: chat_endpoints]: Received chat request: messages='as-sunnah foundation ar AI team kon floor a bosay?' user_id='hasan' session_id='1234'
+[2026-04-07 06:37:54,308: INFO: chat]: Start Chat
+[2026-04-07 06:37:55,129: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:38:40,095: INFO: chat_endpoints]: Received chat request: messages='যোগাযোগের ঠিকানা কী' user_id='hasan' session_id='1234'
+[2026-04-07 06:38:40,096: INFO: chat]: Start Chat
+[2026-04-07 06:38:40,822: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:38:49,822: INFO: chat_endpoints]: Received chat request: messages='যোগাযোগের ঠিকানা কী' user_id='hasan' session_id='1234'
+[2026-04-07 06:38:50,882: INFO: chat_endpoints]: Received chat request: messages='যোগাযোগের ঠিকানা কী' user_id='hasan' session_id='1234'
+[2026-04-07 06:39:09,418: INFO: chat_endpoints]: Received chat request: messages='jogagoj korar thika na ki' user_id='hasan' session_id='1234'
+[2026-04-07 06:39:09,419: INFO: chat]: Start Chat
+[2026-04-07 06:39:10,093: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:51:51,097: INFO: chat]: Start Chat
+[2026-04-07 06:51:52,485: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:52:18,265: INFO: chat]: Start Chat
+[2026-04-07 06:52:19,005: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:56:12,095: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 06:56:33,980: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:56:33,982: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:56:33,983: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-07 06:56:37,997: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 06:56:38,018: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-04-07 06:56:38,036: INFO: document_converter]: Going to convert document batch...
+[2026-04-07 06:56:38,036: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash a6a2eef09bfdbd6bdaeaf15fcaebde59
+[2026-04-07 06:56:38,053: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:56:38,056: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-04-07 06:56:38,071: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:56:38,076: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-04-07 06:56:38,285: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:56:38,577: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-04-07 06:56:38,593: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:56:38,596: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-04-07 06:56:38,602: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:56:39,257: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 06:56:39,259: INFO: __init__]: Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2']
+[2026-04-07 06:56:39,563: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 06:56:39,814: INFO: base_pipeline]: Processing document as_sunnah_fqa.pdf
+[2026-04-07 06:56:41,208: INFO: document_converter]: Finished converting document as_sunnah_fqa.pdf in 3.19 sec.
+[2026-04-07 06:56:41,229: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-04-07 06:56:41,237: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 06:56:42,016: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 06:56:42,016: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 06:56:42,338: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 06:56:42,355: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 06:56:42,361: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-04-07 06:57:18,989: INFO: chat]: Initializing Chat
+[2026-04-07 06:57:18,990: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 06:57:19,106: INFO: graph]: Building ChatBot Graph
+[2026-04-07 06:57:19,107: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:57:19,109: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:57:19,109: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-07 06:57:22,929: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:57:22,943: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 06:57:22,944: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 06:57:22,945: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 06:57:22,946: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-07 06:57:26,715: INFO: retriever]: Loading Vector Database
+[2026-04-07 06:57:26,716: INFO: graph]: Graph Built Successfully
+[2026-04-07 06:57:26,718: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 06:57:26,719: INFO: chat_endpoints]: Received chat request: messages='as sunnah foundation ar thikana ki?' user_id='hasan' session_id='1234'
+[2026-04-07 06:57:26,720: INFO: chat]: Start Chat
+[2026-04-07 06:57:27,537: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 06:59:48,124: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:00:11,639: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:00:11,641: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:00:11,641: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: shihab17/bangla-sentence-transformer
+[2026-04-07 07:00:17,590: WARNING: file_download]: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2026-04-07 07:02:07,230: WARNING: file_download]: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2026-04-07 07:02:08,797: WARNING: file_download]: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2026-04-07 07:02:14,448: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 07:02:14,467: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-04-07 07:02:14,485: INFO: document_converter]: Going to convert document batch...
+[2026-04-07 07:02:14,486: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash a6a2eef09bfdbd6bdaeaf15fcaebde59
+[2026-04-07 07:02:14,502: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:02:14,505: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-04-07 07:02:14,520: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:02:14,524: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-04-07 07:02:14,729: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:02:15,014: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-04-07 07:02:15,029: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:02:15,032: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-04-07 07:02:15,038: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:02:15,683: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:02:15,685: INFO: __init__]: Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2']
+[2026-04-07 07:02:15,991: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:02:16,239: INFO: base_pipeline]: Processing document as_sunnah_fqa.pdf
+[2026-04-07 07:02:17,619: INFO: document_converter]: Finished converting document as_sunnah_fqa.pdf in 3.15 sec.
+[2026-04-07 07:02:17,640: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-04-07 07:02:17,649: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 07:02:18,434: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 07:02:18,434: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 07:02:19,169: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:02:19,183: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:02:19,189: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-04-07 07:02:58,181: INFO: chat]: Initializing Chat
+[2026-04-07 07:02:58,181: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:02:58,300: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:02:58,301: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:02:58,306: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:02:58,306: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: shihab17/bangla-sentence-transformer
+[2026-04-07 07:03:03,221: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:03:03,235: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:03:03,235: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:03:03,238: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:03:03,238: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: shihab17/bangla-sentence-transformer
+[2026-04-07 07:03:07,992: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:03:07,993: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:03:07,996: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:03:07,997: INFO: chat_endpoints]: Received chat request: messages='as-sunnah thikana ki?' user_id='1234' session_id='hasan'
+[2026-04-07 07:03:07,997: INFO: chat]: Start Chat
+[2026-04-07 07:03:08,848: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:07:04,296: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:07:13,779: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:07:13,782: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:07:13,782: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:07:18,559: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 07:07:18,578: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-04-07 07:07:18,601: INFO: document_converter]: Going to convert document batch...
+[2026-04-07 07:07:18,601: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash a6a2eef09bfdbd6bdaeaf15fcaebde59
+[2026-04-07 07:07:18,617: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:07:18,621: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-04-07 07:07:18,638: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:07:18,643: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-04-07 07:07:18,870: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:07:19,186: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-04-07 07:07:19,203: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:07:19,207: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-04-07 07:07:19,212: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:07:19,875: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:07:19,877: INFO: __init__]: Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2']
+[2026-04-07 07:07:20,186: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:07:20,462: INFO: base_pipeline]: Processing document as_sunnah_fqa.pdf
+[2026-04-07 07:07:22,298: INFO: document_converter]: Finished converting document as_sunnah_fqa.pdf in 3.72 sec.
+[2026-04-07 07:07:22,324: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-04-07 07:07:22,332: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 07:07:23,064: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 07:07:23,064: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 07:07:24,481: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:07:24,499: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:07:24,506: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-04-07 07:10:00,042: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:10:21,566: INFO: chat]: Initializing Chat
+[2026-04-07 07:10:21,567: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:10:21,685: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:10:21,685: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:10:21,687: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:10:21,687: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:10:26,554: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:10:26,555: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:10:26,571: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:10:26,591: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:10:26,592: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:10:26,594: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:10:26,594: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:10:31,153: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:10:31,154: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:10:31,157: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:10:31,158: INFO: chat_endpoints]: Received chat request: messages='as-sunnah ar thikana kothai?' user_id='1234' session_id='string'
+[2026-04-07 07:10:31,159: INFO: chat]: Start Chat
+[2026-04-07 07:10:31,993: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:12:07,191: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:13:24,558: INFO: chat]: Initializing Chat
+[2026-04-07 07:13:24,558: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:13:24,674: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:13:24,675: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:13:24,677: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:13:24,677: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:13:29,382: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:13:29,384: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:13:29,399: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:13:29,406: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:13:29,406: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:13:29,408: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:13:29,408: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:13:33,930: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:13:33,931: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:13:33,934: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:13:33,935: INFO: chat_endpoints]: Received chat request: messages='আস-সুন্নাহ ফাউন্ডেশনের AI Engineer টিম কোন ফ্লোরে বসে?' user_id='1234' session_id='string'
+[2026-04-07 07:13:33,935: INFO: chat]: Start Chat
+[2026-04-07 07:13:34,928: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:14:59,311: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:15:08,702: INFO: chat]: Initializing Chat
+[2026-04-07 07:15:08,702: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:15:08,819: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:15:08,819: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:15:08,821: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:15:08,821: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:15:13,460: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:15:13,462: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:15:13,475: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:15:13,483: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:15:13,484: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:15:13,485: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:15:13,485: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:15:18,063: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:15:18,064: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:15:18,066: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:15:18,067: INFO: chat_endpoints]: Received chat request: messages='আস-সুন্নাহ ফাউন্ডেশনের AI Engineer টিম কোন ফ্লোরে বসে?' user_id='123454' session_id='string'
+[2026-04-07 07:15:18,068: INFO: chat]: Start Chat
+[2026-04-07 07:15:18,963: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:18:33,904: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:18:48,266: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:18:48,269: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:18:48,269: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:18:53,770: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 07:18:53,797: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-04-07 07:18:53,816: INFO: document_converter]: Going to convert document batch...
+[2026-04-07 07:18:53,816: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash a6a2eef09bfdbd6bdaeaf15fcaebde59
+[2026-04-07 07:18:53,833: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:18:53,836: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-04-07 07:18:53,853: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:18:53,858: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-04-07 07:18:54,064: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:18:54,351: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-04-07 07:18:54,366: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:18:54,370: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-04-07 07:18:54,375: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:18:55,041: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:18:55,043: INFO: __init__]: Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2']
+[2026-04-07 07:18:55,367: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:18:55,612: INFO: base_pipeline]: Processing document as_sunnah_fqa.pdf
+[2026-04-07 07:18:56,954: INFO: document_converter]: Finished converting document as_sunnah_fqa.pdf in 3.17 sec.
+[2026-04-07 07:18:56,977: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-04-07 07:18:56,985: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 07:18:57,804: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 07:18:57,804: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 07:18:58,717: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:18:58,732: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:18:58,739: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-04-07 07:19:19,692: INFO: chat]: Initializing Chat
+[2026-04-07 07:19:19,692: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:19:19,833: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:19:19,834: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:19:19,838: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:19:19,838: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:19:25,115: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:19:25,145: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:19:25,146: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:19:25,147: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:19:25,147: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:19:30,422: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:19:30,423: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:19:30,426: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:19:30,427: INFO: chat_endpoints]: Received chat request: messages='আস-সুন্নাহ ফাউন্ডেশনের AI Engineer টিম কোন ফ্লোরে বসে?' user_id='12345e454' session_id='string'
+[2026-04-07 07:19:30,427: INFO: chat]: Start Chat
+[2026-04-07 07:19:30,836: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:20:10,398: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:21:02,772: INFO: chat]: Initializing Chat
+[2026-04-07 07:21:02,773: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:21:02,894: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:21:02,894: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:21:02,896: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:21:02,896: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:21:07,645: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:21:07,647: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:21:07,661: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:21:07,667: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:21:07,672: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:21:07,674: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:21:07,674: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:21:12,285: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:21:12,286: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:21:12,289: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:21:12,290: INFO: chat_endpoints]: Received chat request: messages='আস-সুন্নাহ ফাউন্ডেশনের AI Engineer টিম কোন ফ্লোরে বসে?' user_id='12345e454' session_id='strityyng'
+[2026-04-07 07:21:12,291: INFO: chat]: Start Chat
+[2026-04-07 07:21:12,772: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:21:39,936: INFO: chat_endpoints]: Received chat request: messages='যোগাযোগের ঠিকানা কী?' user_id='12345e454' session_id='strityyng'
+[2026-04-07 07:21:39,937: INFO: chat]: Start Chat
+[2026-04-07 07:21:40,642: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:22:54,754: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:23:16,704: INFO: chat]: Initializing Chat
+[2026-04-07 07:23:16,704: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:23:16,839: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:23:16,839: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:23:16,841: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:23:16,841: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:23:21,554: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:23:21,556: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:23:21,573: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:23:21,578: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:23:21,579: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:23:21,580: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:23:21,580: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:23:26,174: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:23:26,174: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:23:26,177: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:23:26,178: INFO: chat_endpoints]: Received chat request: messages='as sunnah foundation যোগাযোগের ঠিকানা কী?' user_id='1234543e454' session_id='strityyng'
+[2026-04-07 07:23:26,178: INFO: chat]: Start Chat
+[2026-04-07 07:23:26,758: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:24:10,471: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:24:21,796: INFO: chat]: Initializing Chat
+[2026-04-07 07:24:21,797: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:24:21,912: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:24:21,912: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:24:21,914: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:24:21,914: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:24:26,634: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:24:26,636: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:24:26,649: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:24:26,655: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:24:26,655: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:24:26,657: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:24:26,657: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:24:31,227: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:24:31,228: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:24:31,231: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:24:31,232: INFO: chat_endpoints]: Received chat request: messages='as sunnah foundation যোগাযোগের ঠিকানা কী?' user_id='1234543e454454' session_id='strityyng'
+[2026-04-07 07:24:31,233: INFO: chat]: Start Chat
+[2026-04-07 07:24:32,199: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:25:28,569: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:26:06,771: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:26:06,774: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:26:06,774: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-07 07:26:10,684: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 07:26:10,706: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-04-07 07:26:10,723: INFO: document_converter]: Going to convert document batch...
+[2026-04-07 07:26:10,724: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash a6a2eef09bfdbd6bdaeaf15fcaebde59
+[2026-04-07 07:26:10,741: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:26:10,745: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-04-07 07:26:10,760: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:26:10,765: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-04-07 07:26:10,973: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:26:11,263: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-04-07 07:26:11,279: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:26:11,283: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-04-07 07:26:11,289: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:26:11,937: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:26:11,939: INFO: __init__]: Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2']
+[2026-04-07 07:26:12,255: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:26:12,512: INFO: base_pipeline]: Processing document as_sunnah_fqa.pdf
+[2026-04-07 07:26:13,899: INFO: document_converter]: Finished converting document as_sunnah_fqa.pdf in 3.19 sec.
+[2026-04-07 07:26:13,923: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-04-07 07:26:13,934: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 07:26:15,645: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 07:26:15,646: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 07:26:15,795: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:26:15,810: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:26:15,817: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-04-07 07:26:22,304: INFO: chat]: Initializing Chat
+[2026-04-07 07:26:22,305: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:26:22,437: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:26:22,437: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:26:22,440: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:26:22,440: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-07 07:26:26,224: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:26:26,239: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:26:26,240: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:26:26,241: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:26:26,242: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+[2026-04-07 07:26:29,974: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:26:29,975: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:26:29,977: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:26:29,978: INFO: chat_endpoints]: Received chat request: messages='as sunnah foundation যোগাযোগের ঠিকানা কী?' user_id='1234543e46754454' session_id='strityfgyng'
+[2026-04-07 07:26:29,979: INFO: chat]: Start Chat
+[2026-04-07 07:26:31,206: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:28:39,650: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:29:04,223: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:29:04,226: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:29:04,226: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:29:08,900: INFO: preprocess_data]: PDF Data Loading and Cleaning
+[2026-04-07 07:29:08,918: INFO: document]: detected formats: [<InputFormat.PDF: 'pdf'>]
+[2026-04-07 07:29:08,938: INFO: document_converter]: Going to convert document batch...
+[2026-04-07 07:29:08,939: INFO: document_converter]: Initializing pipeline for StandardPdfPipeline with options hash a6a2eef09bfdbd6bdaeaf15fcaebde59
+[2026-04-07 07:29:08,957: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:29:08,960: INFO: __init__]: Registered picture descriptions: ['picture_description_vlm_engine', 'vlm', 'api']
+[2026-04-07 07:29:08,978: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:29:08,983: INFO: __init__]: Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+[2026-04-07 07:29:09,191: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:29:09,495: INFO: auto_ocr_model]: Auto OCR model selected rapidocr with onnxruntime.
+[2026-04-07 07:29:09,510: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:29:09,514: INFO: __init__]: Registered layout engines: ['layout_object_detection', 'docling_layout_default', 'docling_experimental_table_crops_layout']
+[2026-04-07 07:29:09,519: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:29:10,164: INFO: base_factory]: Loading plugin 'docling_defaults'
+[2026-04-07 07:29:10,166: INFO: __init__]: Registered table structure engines: ['docling_tableformer', 'docling_tableformer_v2']
+[2026-04-07 07:29:10,470: INFO: accelerator_utils]: Accelerator device: 'cpu'
+[2026-04-07 07:29:10,719: INFO: base_pipeline]: Processing document as_sunnah_fqa.pdf
+[2026-04-07 07:29:12,095: INFO: document_converter]: Finished converting document as_sunnah_fqa.pdf in 3.18 sec.
+[2026-04-07 07:29:12,117: INFO: preprocess_data]: PDF Documents Created Successfully
+[2026-04-07 07:29:12,126: INFO: preprocess_data]: Web Data loading and Cleaning
+[2026-04-07 07:29:13,007: INFO: preprocess_data]: Web Documents Created Successfully
+[2026-04-07 07:29:13,008: INFO: vector_store_data]: Vectorize Data
+[2026-04-07 07:29:14,103: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:29:14,119: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:29:14,125: INFO: vector_store_data]: Vectorize Data Saved Successfully
+[2026-04-07 07:29:46,236: INFO: chat]: Initializing Chat
+[2026-04-07 07:29:46,236: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:29:46,356: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:29:46,357: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:29:46,359: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:29:46,359: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:29:50,912: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:29:50,926: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:29:50,927: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:29:50,928: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:29:50,928: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:29:55,508: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:29:55,509: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:29:55,511: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:29:55,513: INFO: chat_endpoints]: Received chat request: messages='শায়খ আহমাদুল্লাহ কবে আসেন' user_id='34234' session_id='stri34ng'
+[2026-04-07 07:29:55,514: INFO: chat]: Start Chat
+[2026-04-07 07:29:57,202: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:38:48,520: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:39:19,860: INFO: chat]: Initializing Chat
+[2026-04-07 07:39:19,860: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:39:19,982: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:39:19,983: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:39:19,985: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:39:19,985: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:39:24,740: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:39:24,742: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:39:24,755: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:39:24,761: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:39:24,761: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:39:24,763: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:39:24,763: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:39:29,335: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:39:29,336: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:39:29,338: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:39:29,339: INFO: chat_endpoints]: Received chat request: messages='আস-সুন্নাহ ফাউন্ডেশন কী?' user_id='1234' session_id='4534534'
+[2026-04-07 07:39:29,340: INFO: chat]: Start Chat
+[2026-04-07 07:39:30,437: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:39:57,779: INFO: chat_endpoints]: Received chat request: messages='শায়খ আহমাদুল্লাহ কবে আসেন?' user_id='1234' session_id='4534534'
+[2026-04-07 07:39:57,780: INFO: chat]: Start Chat
+[2026-04-07 07:39:58,623: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:40:51,141: INFO: chat_endpoints]: Received chat request: messages='যোগাযোগের ঠিকানা কী?' user_id='1234' session_id='4534534'
+[2026-04-07 07:40:51,142: INFO: chat]: Start Chat
+[2026-04-07 07:40:52,851: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:41:16,714: INFO: chat_endpoints]: Received chat request: messages='আস-সুন্নাহ ফাউন্ডেশনের AI Engineer টিম কোন ফ্লোরে বসে?' user_id='1234' session_id='4534534'
+[2026-04-07 07:41:16,716: INFO: chat]: Start Chat
+[2026-04-07 07:41:17,722: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:42:04,454: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:43:53,938: INFO: chat]: Initializing Chat
+[2026-04-07 07:43:53,939: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:43:54,079: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:43:54,079: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:43:54,081: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:43:54,081: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:43:59,372: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:43:59,374: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:43:59,388: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:43:59,395: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:43:59,395: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:43:59,397: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:43:59,398: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:44:04,008: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:44:04,009: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:44:04,011: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:44:04,011: INFO: chat]: Start Chat
+[2026-04-07 07:44:04,872: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:44:59,844: INFO: chat]: Start Chat
+[2026-04-07 07:45:00,998: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:45:23,084: INFO: chat]: Start Chat
+[2026-04-07 07:45:23,886: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:47:04,267: INFO: chat]: Start Chat
+[2026-04-07 07:47:05,018: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:47:38,393: INFO: chat]: Start Chat
+[2026-04-07 07:47:39,410: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:51:46,585: WARNING: user_agent]: USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-04-07 07:52:08,346: INFO: chat]: Initializing Chat
+[2026-04-07 07:52:08,347: INFO: groq_llm]: Initializing Groq LLM....
+[2026-04-07 07:52:08,471: INFO: graph]: Building ChatBot Graph
+[2026-04-07 07:52:08,471: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:52:08,473: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:52:08,473: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:52:26,242: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:52:26,244: INFO: loader]: Loading faiss with AVX2 support.
+[2026-04-07 07:52:26,259: INFO: loader]: Successfully loaded faiss with AVX2 support.
+[2026-04-07 07:52:26,268: INFO: retriever]: Retriever Created Successfully
+[2026-04-07 07:52:26,268: INFO: groq_llm]: Initializing Huggingface Embedding....
+[2026-04-07 07:52:26,270: INFO: SentenceTransformer]: Use pytorch device_name: cpu
+[2026-04-07 07:52:26,270: INFO: SentenceTransformer]: Load pretrained SentenceTransformer: l3cube-pune/bengali-sentence-similarity-sbert
+[2026-04-07 07:52:30,830: INFO: retriever]: Loading Vector Database
+[2026-04-07 07:52:30,831: INFO: graph]: Graph Built Successfully
+[2026-04-07 07:52:30,833: INFO: chat]: Chat Initialized Successfully
+[2026-04-07 07:52:30,834: INFO: chat_endpoints]: Received chat request: messages='string' user_id='string' session_id='string'
+[2026-04-07 07:52:30,835: INFO: chat]: Start Chat
+[2026-04-07 07:52:31,688: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:55:26,477: INFO: chat]: Start Chat
+[2026-04-07 07:55:27,419: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:56:05,653: INFO: chat]: Start Chat
+[2026-04-07 07:56:06,524: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:56:31,618: INFO: chat]: Start Chat
+[2026-04-07 07:56:32,121: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:57:09,857: INFO: chat]: Start Chat
+[2026-04-07 07:57:10,369: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:57:36,849: INFO: chat]: Start Chat
+[2026-04-07 07:57:37,948: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:58:02,953: INFO: chat]: Start Chat
+[2026-04-07 07:58:03,929: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:59:05,650: INFO: chat]: Start Chat
+[2026-04-07 07:59:06,428: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-04-07 07:59:25,704: INFO: chat]: Start Chat
+[2026-04-07 07:59:26,172: INFO: _client]: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

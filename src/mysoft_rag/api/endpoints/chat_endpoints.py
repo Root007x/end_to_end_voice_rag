@@ -70,6 +70,25 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     }
 
 
+@router.post("/vapi_chat")
+async def vapi_chat(payload: dict, init_chat: InitChat = Depends(get_chat_instance)):
+    try:
+        tool_call = payload["message"]["toolCalls"][0]
+        question = tool_call["function"]["arguments"]["user_question"]
+        tool_id = tool_call["id"]
+    except KeyError:
+        question = payload.get("message", {}).get("content", "")
+        tool_id = None
+
+    print(f"Received question: {question}, tool_id: {tool_id}")
+    respond, confidence = init_chat.chat(question, str(tool_id))
+
+    if tool_id:
+        return {"results": [{"toolCallId": tool_id, "result": {"response": respond}}]}
+
+    return {"response": respond}
+
+
 @router.post("/chat")
 async def chat(
     chat_req: ChatRequest,

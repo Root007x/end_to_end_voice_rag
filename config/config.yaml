@@ -1,6 +1,6 @@
 groqai:
   model: "llama-3.3-70b-versatile"
-  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  embedding_model: "l3cube-pune/bengali-sentence-similarity-sbert"
   temperature: 0.0
 
 whisper_model:
@@ -13,7 +13,7 @@ logger:
 
 
 pdf_file:
-  loc: "src/mysoft_rag/data/Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow.pdf"
+  loc: "src/mysoft_rag/data/as_sunnah_fqa.pdf"
 
 web_data:
   urls: [

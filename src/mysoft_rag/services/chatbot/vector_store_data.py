@@ -19,10 +19,10 @@ class VectorStore:
 
         try:
             logger.info("Vectorize Data")
-            combine_docs = self.pdf_doc + self.web_doc  # combine all documents
+            combine_docs = self.pdf_doc  # + self.web_doc  # combine all documents
 
             text_splitter = RecursiveCharacterTextSplitter(
-                chunk_size=1000, chunk_overlap=150
+                chunk_size=600, chunk_overlap=150
             )
 
             docs_splits = text_splitter.split_documents(combine_docs)

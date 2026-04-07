@@ -30,7 +30,7 @@ class PreprocessData:
                     Document(
                         page_content=section,
                         metadata={
-                            "Topic": "Machine Learning (ML)",
+                            "Topic": "As-Sunnah Foundation",
                             "source": "PDF Document",
                             "type": "pdf_section",
                         },

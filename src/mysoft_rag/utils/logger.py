@@ -14,7 +14,10 @@ os.makedirs(log_dir, exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format=logging_str,
-    handlers=[logging.FileHandler(log_file_path), logging.StreamHandler(sys.stdout)],
+    handlers=[
+        logging.FileHandler(log_file_path, encoding="utf-8"),
+        logging.StreamHandler(sys.stdout),
+    ],
 )
 
 logger = logging.getLogger("rag")
